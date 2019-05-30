@@ -1,5 +1,5 @@
-##Changes made to date:
-#Setup.py
+# Changes made to date:
+## Setup.py
 The original setup file encountered many errors.  I re-ordered the deployment of the packages as well as added a prompt to allow users to select what they'd like to accomplish.
 
 1 - Update OS
