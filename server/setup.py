@@ -33,8 +33,6 @@ def run_os_command(cmd, max_runs=4):
         for x in range(0,max_runs):
             if os.system(cmd) == 0:
                 break
-            else:
-                time.sleep(5)
     except:
         print('AN ERROR OCCURRED RUNNING THE FOLLOWING COMMAND: ' + cmd)
         pass
@@ -66,6 +64,10 @@ def install_car():
     except:
         pass
    
+    # Prepare to install.  Clean & Update the repositories
+    run_os_command("sudo apt-get clean")
+    run_os_command("sudo apt-get update")
+    
     # Install the new software
     run_os_command("sudo apt-get install -y i2c-tools")
     run_os_command("sudo apt-get install -y swig")
